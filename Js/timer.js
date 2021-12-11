@@ -20,10 +20,10 @@ let time = date.getTime();
 let seconds = 1000;
 let minutes = seconds * 60;
 
-let textMinutes = Math.floor((time % minutes * 60) / minutes)
+let textMinutes = Math.floor((time % (minutes * 60)) / minutes)
 let textSeconds = Math.floor((time % minutes) / seconds)
 
-setInterval(() => {
+let myTime = setInterval(() => {
     if (textSeconds < 59) {
         textSeconds++
     } else {

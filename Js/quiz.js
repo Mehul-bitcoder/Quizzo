@@ -313,14 +313,6 @@ let gscience_questions = [
         answer: 4,
     },
     {
-        question: "Which of the gas is not known as green house gas?",
-        option1: 'Methane',
-        option2: 'Nitrous oxide',
-        option3: 'Carbon dioxide',
-        option4: 'Hydrogen',
-        answer: 4,
-    },
-    {
         question: "The hardest substance available on earth is",
         option1: 'Gold',
         option2: 'Vibranium',
@@ -334,6 +326,14 @@ let gscience_questions = [
         option2: 'Silica',
         option3: 'Iron Oxide',
         option4: 'Diamond',
+        answer: 1,
+    },
+    {
+        question: "What is laughing gas?",
+        option1: 'Nitrous Oxide',
+        option2: 'Carbon monoxide',
+        option3: 'Sulphur dioxide',
+        option4: 'Hydrogen peroxide',
         answer: 1,
     },
 ]
@@ -726,6 +726,7 @@ getNewQuestion = () => {
     })
     availableQuestions.splice(questionIndex, 1);
     resetOptions();
+    console.log(availableQuestions)
 }
 
 let option = document.querySelectorAll("li.option");
@@ -757,7 +758,7 @@ Change = () => {
     }
     console.log(`${questionCount} : ${score}`)
     if (questionCount >= max_questions) {
-        localStorage.setItem("Total Time", `${minutes} minutes and ${seconds} seconds`)
+        localStorage.setItem("Total Time", `${textMinutes} minutes and ${textSeconds} seconds`)
         clearInterval(myTime)
         location.href = "../html/result.html"
     } else {
