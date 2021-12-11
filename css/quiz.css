@@ -48,6 +48,7 @@ body {
   grid-template-rows: 3rem auto;
   overflow: hidden;
   border-radius: 5px;
+  /* border: 1px solid #f54b64; */
 }
 
 .quiz_head {
@@ -108,8 +109,7 @@ body {
 }
 
 .option {
-  min-width: 20rem;
-  width: 95%;
+  width: 20rem;
   padding: 1rem 2rem;
   background: #4a535a;
   color: #c2c4c4;
@@ -181,4 +181,19 @@ body {
 
 .question_cont {
   color: #f5f7f7 !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .quiz_container {
+    width: 320px;
+  }
+  .quiz_head {
+  }
+
+  .option {
+    width: 16rem;
+  }
+  .question_cont {
+    font-size: 1rem;
+  }
 }

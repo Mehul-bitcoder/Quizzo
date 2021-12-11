@@ -227,3 +227,11 @@ h1 {
   max-width: 300px;
   width: 95%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
